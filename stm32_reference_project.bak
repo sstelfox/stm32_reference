@@ -1,0 +1,126 @@
+EESchema Schematic File Version 4
+LIBS:stm32_reference_project-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_ST_STM32F1:STM32F103C8Tx U?
+U 1 1 5C50E79D
+P 4600 4600
+F 0 "U?" H 4550 3011 50  0000 C CNN
+F 1 "STM32F103C8Tx" H 4550 2920 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 4000 3200 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 4600 4600 50  0001 C CNN
+	1    4600 4600
+	1    0    0    -1  
+$EndComp
+Text Notes 2950 1550 0    50   ~ 0
+Vdd, Vdda, and Vbat require a voltage of 2.0V - 3.6V\nThe voltage requirements are 2.4V to 3.6V when the ADC is used\nVbat only powers the RTC and backup registers
+$Comp
+L Device:C C?
+U 1 1 5C54792D
+P 3150 2300
+F 0 "C?" H 3265 2346 50  0000 L CNN
+F 1 "100nF" H 3265 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3188 2150 50  0001 C CNN
+F 3 "~" H 3150 2300 50  0001 C CNN
+F 4 "C" H 3150 2300 50  0001 C CNN "Spice_Primitive"
+F 5 "100n" H 3150 2300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3150 2300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3150 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C548A3E
+P 3600 2300
+F 0 "C?" H 3715 2346 50  0000 L CNN
+F 1 "100nF" H 3715 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3638 2150 50  0001 C CNN
+F 3 "~" H 3600 2300 50  0001 C CNN
+F 4 "C" H 3600 2300 50  0001 C CNN "Spice_Primitive"
+F 5 "100n" H 3600 2300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3600 2300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3600 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C548CA4
+P 4050 2300
+F 0 "C?" H 4165 2346 50  0000 L CNN
+F 1 "100nF" H 4165 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4088 2150 50  0001 C CNN
+F 3 "~" H 4050 2300 50  0001 C CNN
+F 4 "C" H 4050 2300 50  0001 C CNN "Spice_Primitive"
+F 5 "100n" H 4050 2300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4050 2300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4050 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5C54E17F
+P 4600 1850
+F 0 "#PWR?" H 4600 1700 50  0001 C CNN
+F 1 "VDD" H 4617 2023 50  0000 C CNN
+F 2 "" H 4600 1850 50  0001 C CNN
+F 3 "" H 4600 1850 50  0001 C CNN
+	1    4600 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3100 4600 2000
+Wire Wire Line
+	4600 2000 4050 2000
+Wire Wire Line
+	4050 2000 4050 2150
+Wire Wire Line
+	4600 1850 4600 2000
+Connection ~ 4600 2000
+Wire Wire Line
+	3600 2150 3600 2000
+Wire Wire Line
+	3600 2000 4050 2000
+Connection ~ 4050 2000
+Wire Wire Line
+	3150 2150 3150 2000
+Wire Wire Line
+	3150 2000 3600 2000
+Connection ~ 3600 2000
+$Comp
+L power:GND #PWR?
+U 1 1 5C54ED17
+P 3600 2750
+F 0 "#PWR?" H 3600 2500 50  0001 C CNN
+F 1 "GND" H 3605 2577 50  0000 C CNN
+F 2 "" H 3600 2750 50  0001 C CNN
+F 3 "" H 3600 2750 50  0001 C CNN
+	1    3600 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2450 3150 2600
+Wire Wire Line
+	3150 2600 3600 2600
+Wire Wire Line
+	3600 2600 3600 2450
+Wire Wire Line
+	3600 2750 3600 2600
+Connection ~ 3600 2600
+Wire Wire Line
+	3600 2600 4050 2600
+Wire Wire Line
+	4050 2600 4050 2450
+$EndSCHEMATC
