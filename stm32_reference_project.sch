@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
 LIBS:stm32_reference_project-cache
-LIBS:relay_system_controller-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -33,7 +32,7 @@ L Device:C C6
 U 1 1 5C54792D
 P 3200 3700
 F 0 "C6" H 3315 3746 50  0000 L CNN
-F 1 "100nF" H 3315 3655 50  0000 L CNN
+F 1 "0.1uF" H 3315 3655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3238 3550 50  0001 C CNN
 F 3 "" H 3200 3700 50  0001 C CNN
 F 4 "C" H 3200 3700 50  0001 C CNN "Spice_Primitive"
@@ -47,7 +46,7 @@ L Device:C C10
 U 1 1 5C548A3E
 P 3650 3700
 F 0 "C10" H 3765 3746 50  0000 L CNN
-F 1 "100nF" H 3765 3655 50  0000 L CNN
+F 1 "0.1uF" H 3765 3655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3688 3550 50  0001 C CNN
 F 3 "" H 3650 3700 50  0001 C CNN
 F 4 "C" H 3650 3700 50  0001 C CNN "Spice_Primitive"
@@ -61,7 +60,7 @@ L Device:C C12
 U 1 1 5C548CA4
 P 4100 3700
 F 0 "C12" H 4215 3746 50  0000 L CNN
-F 1 "100nF" H 4215 3655 50  0000 L CNN
+F 1 "0.1uF" H 4215 3655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 4138 3550 50  0001 C CNN
 F 3 "" H 4100 3700 50  0001 C CNN
 F 4 "C" H 4100 3700 50  0001 C CNN "Spice_Primitive"
@@ -106,7 +105,7 @@ Wire Wire Line
 Wire Wire Line
 	4100 4000 4100 3850
 $Comp
-L relay_system_controller-rescue:USB_OTG-relay_system_controller-rescue J1
+L stm32_reference_project-rescue:USB_OTG-relay_system_controller-rescue-relay_system_controller-rescue J1
 U 1 1 5A74F411
 P 1850 950
 F 0 "J1" V 1500 900 50  0000 L CNN
@@ -134,35 +133,44 @@ Wire Wire Line
 Wire Wire Line
 	1450 950  1300 950 
 $Comp
-L relay_system_controller-rescue:R-relay_system_controller-rescue R5
+L stm32_reference_project-rescue:R-relay_system_controller-rescue-relay_system_controller-rescue R5
 U 1 1 5ADA1249
 P 2150 1900
 F 0 "R5" V 1950 1900 50  0000 C CNN
 F 1 "22" V 2050 1900 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 2080 1900 50  0001 C CNN
 F 3 "" H 2150 1900 50  0001 C CNN
+F 4 "R" H 2150 1900 50  0001 C CNN "Spice_Primitive"
+F 5 "22" H 2150 1900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2150 1900 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    2150 1900
 	0    1    1    0   
 $EndComp
 $Comp
-L relay_system_controller-rescue:R-relay_system_controller-rescue R6
+L stm32_reference_project-rescue:R-relay_system_controller-rescue-relay_system_controller-rescue R6
 U 1 1 5ADA14FC
 P 2450 1600
 F 0 "R6" H 2550 1650 50  0000 C CNN
 F 1 "1.5k" H 2600 1550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 2380 1600 50  0001 C CNN
 F 3 "" H 2450 1600 50  0001 C CNN
+F 4 "R" H 2450 1600 50  0001 C CNN "Spice_Primitive"
+F 5 "1.5k" H 2450 1600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2450 1600 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    2450 1600
 	1    0    0    -1  
 $EndComp
 $Comp
-L relay_system_controller-rescue:R-relay_system_controller-rescue R3
+L stm32_reference_project-rescue:R-relay_system_controller-rescue-relay_system_controller-rescue R3
 U 1 1 5ADA17B2
 P 1450 1900
 F 0 "R3" V 1650 1900 50  0000 C CNN
 F 1 "22" V 1550 1900 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 1380 1900 50  0001 C CNN
 F 3 "" H 1450 1900 50  0001 C CNN
+F 4 "R" H 1450 1900 50  0001 C CNN "Spice_Primitive"
+F 5 "22" H 1450 1900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1450 1900 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1450 1900
 	0    -1   -1   0   
 $EndComp
@@ -174,6 +182,9 @@ F 0 "C1" H 900 2150 50  0000 C CNN
 F 1 "47pF" H 850 2250 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1088 2050 50  0001 C CNN
 F 3 "" H 1050 2200 50  0001 C CNN
+F 4 "C" H 1050 2200 50  0001 C CNN "Spice_Primitive"
+F 5 "47p" H 1050 2200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1050 2200 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1050 2200
 	-1   0    0    1   
 $EndComp
@@ -185,6 +196,9 @@ F 0 "C5" H 2300 2150 50  0000 C CNN
 F 1 "47pF" H 2250 2250 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 2488 2050 50  0001 C CNN
 F 3 "" H 2450 2200 50  0001 C CNN
+F 4 "C" H 2450 2200 50  0001 C CNN "Spice_Primitive"
+F 5 "47p" H 2450 2200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2450 2200 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    2450 2200
 	-1   0    0    1   
 $EndComp
@@ -229,6 +243,9 @@ F 0 "C3" V 1048 7100 50  0000 C CNN
 F 1 "20pF" V 1139 7100 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1338 6950 50  0001 C CNN
 F 3 "" H 1300 7100 50  0001 C CNN
+F 4 "C" H 1300 7100 50  0001 C CNN "Spice_Primitive"
+F 5 "20p" H 1300 7100 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1300 7100 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1300 7100
 	0    1    1    0   
 $EndComp
@@ -240,6 +257,9 @@ F 0 "C2" V 1048 6500 50  0000 C CNN
 F 1 "20pF" V 1139 6500 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1338 6350 50  0001 C CNN
 F 3 "" H 1300 6500 50  0001 C CNN
+F 4 "C" H 1300 6500 50  0001 C CNN "Spice_Primitive"
+F 5 "20p" H 1300 6500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1300 6500 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1300 6500
 	0    1    1    0   
 $EndComp
@@ -291,6 +311,9 @@ F 0 "C9" V 3098 7100 50  0000 C CNN
 F 1 "10pF" V 3189 7100 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3388 6950 50  0001 C CNN
 F 3 "" H 3350 7100 50  0001 C CNN
+F 4 "C" H 3350 7100 50  0001 C CNN "Spice_Primitive"
+F 5 "10p" H 3350 7100 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3350 7100 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3350 7100
 	0    1    1    0   
 $EndComp
@@ -302,6 +325,9 @@ F 0 "C8" V 3098 6500 50  0000 C CNN
 F 1 "10pF" V 3189 6500 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3388 6350 50  0001 C CNN
 F 3 "" H 3350 6500 50  0001 C CNN
+F 4 "C" H 3350 6500 50  0001 C CNN "Spice_Primitive"
+F 5 "10p" H 3350 6500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3350 6500 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3350 6500
 	0    1    1    0   
 $EndComp
@@ -326,7 +352,7 @@ Connection ~ 3650 6500
 Connection ~ 3650 7100
 Text Label 3400 1300 2    50   ~ 0
 USB_VCC
-Text Label 2450 3400 2    50   ~ 0
+Text Label 1250 3400 0    50   ~ 0
 RESET
 Text Label 8200 2450 0    50   ~ 0
 RESET
@@ -428,24 +454,11 @@ P 2850 1300
 AR Path="/5C0D38F7" Ref="D1"  Part="1" 
 AR Path="/5C277487/5C0D38F7" Ref="D?"  Part="1" 
 F 0 "D1" H 2850 1200 50  0000 C CNN
-F 1 "12V" H 2850 1175 50  0001 C CNN
+F 1 "NEEDS_SPEC" H 2850 1175 50  0001 C CNN
 F 2 "Diode_SMD:D_SOD-123" H 2850 1300 50  0001 C CNN
 F 3 "" H 2850 1300 50  0001 C CNN
 	1    2850 1300
 	-1   0    0    1   
-$EndComp
-$Comp
-L Device:C C4
-U 1 1 5C194493
-P 2050 3750
-AR Path="/5C194493" Ref="C4"  Part="1" 
-AR Path="/5C77D6A4/5C194493" Ref="C?"  Part="1" 
-F 0 "C4" H 2165 3796 50  0000 L CNN
-F 1 "10uF" H 2165 3705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 2088 3600 50  0001 C CNN
-F 3 "" H 2050 3750 50  0001 C CNN
-	1    2050 3750
-	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_SPST SW1
@@ -474,19 +487,6 @@ F 3 "" H 1850 4200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
-U 1 1 5C1944AF
-P 1350 3400
-AR Path="/5C1944AF" Ref="R2"  Part="1" 
-AR Path="/5C77D6A4/5C1944AF" Ref="R?"  Part="1" 
-F 0 "R2" V 1550 3350 50  0000 L CNN
-F 1 "10k" V 1450 3350 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 1280 3400 50  0001 C CNN
-F 3 "" H 1350 3400 50  0001 C CNN
-	1    1350 3400
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR021
 U 1 1 5C194501
 P 5950 1900
@@ -509,13 +509,12 @@ F 0 "R7" V 4893 1650 50  0000 C CNN
 F 1 "10k" V 4984 1650 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 5030 1650 50  0001 C CNN
 F 3 "" H 5100 1650 50  0001 C CNN
+F 4 "R" H 5100 1650 50  0001 C CNN "Spice_Primitive"
+F 5 "10k" H 5100 1650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5100 1650 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5100 1650
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1050 3250 1050 3400
-Wire Wire Line
-	1050 3400 1200 3400
 Text Notes 5100 1100 0    50   ~ 0
 BOOT_SELECT Note:\nNormal operation: BOOT0\nUSB Bootloader: BOOT1\nThere is a third option that boots from SRAM\nwhich isn't settable with this type of switch (both high)
 Text Label 8200 3850 0    50   ~ 0
@@ -582,14 +581,11 @@ Wire Wire Line
 Wire Wire Line
 	4500 1650 4950 1650
 Wire Wire Line
-	1500 3400 1650 3400
-Wire Wire Line
 	1650 3400 1650 3550
 Wire Wire Line
 	2050 3600 2050 3400
 Wire Wire Line
 	2050 3400 1650 3400
-Connection ~ 1650 3400
 Wire Wire Line
 	1650 3950 1650 4050
 Wire Wire Line
@@ -602,8 +598,7 @@ Connection ~ 1850 4050
 Wire Wire Line
 	1850 4050 2050 4050
 Wire Wire Line
-	2450 3400 2050 3400
-Connection ~ 2050 3400
+	1250 3400 1650 3400
 $Comp
 L Device:R R4
 U 1 1 5C5787B0
@@ -612,6 +607,9 @@ F 0 "R4" H 2120 6846 50  0000 L CNN
 F 1 "1M" H 2120 6755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 1980 6800 50  0001 C CNN
 F 3 "" H 2050 6800 50  0001 C CNN
+F 4 "R" H 2050 6800 50  0001 C CNN "Spice_Primitive"
+F 5 "1Meg" H 2050 6800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2050 6800 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    2050 6800
 	1    0    0    -1  
 $EndComp
@@ -734,7 +732,7 @@ F 1 "10uF" H 3315 5205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3238 5100 50  0001 C CNN
 F 3 "" H 3200 5250 50  0001 C CNN
 F 4 "C" H 3200 5250 50  0001 C CNN "Spice_Primitive"
-F 5 "100n" H 3200 5250 50  0001 C CNN "Spice_Model"
+F 5 "10u" H 3200 5250 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 3200 5250 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3200 5250
 	1    0    0    -1  
@@ -748,7 +746,7 @@ F 1 "10uF" H 3765 5205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3688 5100 50  0001 C CNN
 F 3 "" H 3650 5250 50  0001 C CNN
 F 4 "C" H 3650 5250 50  0001 C CNN "Spice_Primitive"
-F 5 "100n" H 3650 5250 50  0001 C CNN "Spice_Model"
+F 5 "10u" H 3650 5250 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 3650 5250 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3650 5250
 	1    0    0    -1  
@@ -762,7 +760,7 @@ F 1 "10uF" H 4215 5205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 4138 5100 50  0001 C CNN
 F 3 "" H 4100 5250 50  0001 C CNN
 F 4 "C" H 4100 5250 50  0001 C CNN "Spice_Primitive"
-F 5 "100n" H 4100 5250 50  0001 C CNN "Spice_Model"
+F 5 "10u" H 4100 5250 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4100 5250 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4100 5250
 	1    0    0    -1  
@@ -839,6 +837,9 @@ F 0 "R1" V 1093 5250 50  0000 C CNN
 F 1 "0" V 1184 5250 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 1230 5250 50  0001 C CNN
 F 3 "" H 1300 5250 50  0001 C CNN
+F 4 "R" H 1300 5250 50  0001 C CNN "Spice_Primitive"
+F 5 "0" H 1300 5250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1300 5250 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1300 5250
 	0    1    1    0   
 $EndComp
@@ -898,7 +899,7 @@ L Device:C C14
 U 1 1 5C7F9FBF
 P 5200 6500
 F 0 "C14" V 5450 6450 50  0000 L CNN
-F 1 "100nF" V 5350 6400 50  0000 L CNN
+F 1 "0.1uF" V 5350 6400 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5238 6350 50  0001 C CNN
 F 3 "" H 5200 6500 50  0001 C CNN
 F 4 "C" H 5200 6500 50  0001 C CNN "Spice_Primitive"
@@ -922,9 +923,12 @@ L Device:C C15
 U 1 1 5C83E9AD
 P 5350 4950
 F 0 "C15" H 5465 4996 50  0000 L CNN
-F 1 "100nF" H 5465 4905 50  0000 L CNN
+F 1 "0.1uF" H 5465 4905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5388 4800 50  0001 C CNN
 F 3 "" H 5350 4950 50  0001 C CNN
+F 4 "C" H 5350 4950 50  0001 C CNN "Spice_Primitive"
+F 5 "100n" H 5350 4950 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5350 4950 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5350 4950
 	1    0    0    -1  
 $EndComp
@@ -951,6 +955,9 @@ F 0 "C16" H 5965 4996 50  0000 L CNN
 F 1 "1uF" H 5965 4905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5888 4800 50  0001 C CNN
 F 3 "" H 5850 4950 50  0001 C CNN
+F 4 "C" H 5850 4950 50  0001 C CNN "Spice_Primitive"
+F 5 "1u" H 5850 4950 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5850 4950 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5850 4950
 	1    0    0    -1  
 $EndComp
@@ -1004,7 +1011,7 @@ L Device:Ferrite_Bead_Small FB1
 U 1 1 5C8A0B8D
 P 5600 4400
 F 0 "FB1" H 5450 4400 50  0000 C CNN
-F 1 "PowerLine 220 Ohms @ 100MHz (Value unclear)" H 5600 4200 50  0001 C CNN
+F 1 "NEEDS_SPEC" H 5600 4200 50  0001 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 5530 4400 50  0001 C CNN
 F 3 "" H 5600 4400 50  0001 C CNN
 	1    5600 4400
@@ -1164,22 +1171,14 @@ F 0 "R8" V 6893 1650 50  0000 C CNN
 F 1 "10k" V 6984 1650 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 1650 50  0001 C CNN
 F 3 "" H 7100 1650 50  0001 C CNN
+F 4 "R" H 7100 1650 50  0001 C CNN "Spice_Primitive"
+F 5 "10k" H 7100 1650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7100 1650 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    7100 1650
 	0    -1   1    0   
 $EndComp
 Text Label 7700 1650 2    50   ~ 0
 BOOT1
-$Comp
-L power:VDD #PWR04
-U 1 1 5C9D8C75
-P 1050 3250
-F 0 "#PWR04" H 1050 3100 50  0001 C CNN
-F 1 "VDD" H 1067 3423 50  0000 C CNN
-F 2 "" H 1050 3250 50  0001 C CNN
-F 3 "" H 1050 3250 50  0001 C CNN
-	1    1050 3250
-	1    0    0    -1  
-$EndComp
 Text Notes 6700 4600 0    50   ~ 0
 NOTE: I just threw in this LTO as an example\nand should not be used as a reference circuit.\nThis should be redone.
 Wire Wire Line
@@ -1221,6 +1220,9 @@ F 0 "C17" H 8115 5346 50  0000 L CNN
 F 1 "10uF" H 8115 5255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8038 5150 50  0001 C CNN
 F 3 "" H 8000 5300 50  0001 C CNN
+F 4 "C" H 8000 5300 50  0001 C CNN "Spice_Primitive"
+F 5 "10u" H 8000 5300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8000 5300 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    8000 5300
 	1    0    0    -1  
 $EndComp
@@ -1242,7 +1244,7 @@ P 7550 5000
 F 0 "U1" H 7550 5242 50  0000 C CNN
 F 1 "AMS1117-3.3" H 7550 5151 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 7550 5200 50  0001 C CNN
-F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 7650 4750 50  0001 C CNN
+F 3 "" H 7650 4750 50  0001 C CNN
 	1    7550 5000
 	1    0    0    -1  
 $EndComp
@@ -1255,12 +1257,27 @@ P 3700 2000
 AR Path="/5CA5FD4B" Ref="D2"  Part="1" 
 AR Path="/5C277487/5CA5FD4B" Ref="D?"  Part="1" 
 F 0 "D2" H 3700 1900 50  0000 C CNN
-F 1 "12V" H 3700 1875 50  0001 C CNN
+F 1 "NEEDS_SPEC" H 3700 1875 50  0001 C CNN
 F 2 "Diode_SMD:D_SOD-123" H 3700 2000 50  0001 C CNN
 F 3 "" H 3700 2000 50  0001 C CNN
 	1    3700 2000
-	0    -1   -1   0   
+	0    1    1    0   
 $EndComp
 Wire Wire Line
 	3700 1700 3700 1850
+$Comp
+L Device:C C4
+U 1 1 5C566DDD
+P 2050 3750
+F 0 "C4" H 2165 3796 50  0000 L CNN
+F 1 "0.1uF" H 2165 3705 50  0000 L CNN
+F 2 "" H 2088 3600 50  0001 C CNN
+F 3 "" H 2050 3750 50  0001 C CNN
+F 4 "C" H 2050 3750 50  0001 C CNN "Spice_Primitive"
+F 5 "100nF" H 2050 3750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2050 3750 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2050 3750
+	1    0    0    -1  
+$EndComp
+Connection ~ 1650 3400
 $EndSCHEMATC
