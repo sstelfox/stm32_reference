@@ -1,4 +1,4 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 5
 LIBS:stm32_reference_project-cache
 EELAYER 29 0
 EELAYER END
@@ -268,8 +268,6 @@ Wire Wire Line
 	1450 6500 1600 6500
 Wire Wire Line
 	1600 6500 1600 6650
-Connection ~ 1600 6500
-Connection ~ 1600 7100
 $Comp
 L Device:Crystal Y2
 U 1 1 5C33BFC9
@@ -441,19 +439,6 @@ F 3 "" H 1300 4200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR021
-U 1 1 5C194501
-P 9150 1800
-AR Path="/5C194501" Ref="#PWR021"  Part="1" 
-AR Path="/5C77D6A4/5C194501" Ref="#PWR?"  Part="1" 
-F 0 "#PWR021" H 9150 1550 50  0001 C CNN
-F 1 "GND" H 9155 1627 50  0000 C CNN
-F 2 "" H 9150 1800 50  0001 C CNN
-F 3 "" H 9150 1800 50  0001 C CNN
-	1    9150 1800
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R7
 U 1 1 5C194511
 P 8300 1550
@@ -485,12 +470,12 @@ $Comp
 L Switch:SW_DPDT_x2 SW2
 U 1 1 5C541C87
 P 8800 1550
-F 0 "SW2" H 8800 1835 50  0000 C CNN
-F 1 "BOOT_SELECT" H 8800 1744 50  0000 C CNN
+F 0 "SW2" H 8800 1200 50  0000 C CNN
+F 1 "BOOT_SELECT" H 8800 1300 50  0000 C CNN
 F 2 "Button_Switch_THT:SW_E-Switch_EG1271_DPDT" H 8800 1550 50  0001 C CNN
 F 3 "" H 8800 1550 50  0001 C CNN
 	1    8800 1550
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	9000 1450 9150 1450
@@ -526,31 +511,17 @@ Wire Wire Line
 $Comp
 L Device:R R4
 U 1 1 5C5787B0
-P 2050 6800
-F 0 "R4" H 2120 6846 50  0000 L CNN
-F 1 "1M" H 2120 6755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 1980 6800 50  0001 C CNN
-F 3 "" H 2050 6800 50  0001 C CNN
-F 4 "R" H 2050 6800 50  0001 C CNN "Spice_Primitive"
-F 5 "1Meg" H 2050 6800 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 2050 6800 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    2050 6800
-	1    0    0    -1  
+P 1900 7100
+F 0 "R4" H 1970 7146 50  0000 L CNN
+F 1 "390" H 1970 7055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1830 7100 50  0001 C CNN
+F 3 "" H 1900 7100 50  0001 C CNN
+F 4 "R" H 1900 7100 50  0001 C CNN "Spice_Primitive"
+F 5 "390" H 1900 7100 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1900 7100 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1900 7100
+	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1600 6500 2050 6500
-Wire Wire Line
-	1600 7100 2050 7100
-Wire Wire Line
-	2050 6950 2050 7100
-Wire Wire Line
-	2050 6650 2050 6500
-Wire Wire Line
-	2500 7100 2050 7100
-Connection ~ 2050 7100
-Wire Wire Line
-	2500 6500 2050 6500
-Connection ~ 2050 6500
 Wire Wire Line
 	3200 3400 3200 3200
 Text Label 2250 3400 0    50   ~ 0
@@ -720,17 +691,6 @@ $EndComp
 Wire Wire Line
 	9300 2800 9300 2950
 $Comp
-L power:VDD #PWR020
-U 1 1 5C964291
-P 9150 1300
-F 0 "#PWR020" H 9150 1150 50  0001 C CNN
-F 1 "VDD" H 9167 1473 50  0000 C CNN
-F 2 "" H 9150 1300 50  0001 C CNN
-F 3 "" H 9150 1300 50  0001 C CNN
-	1    9150 1300
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VDD #PWR022
 U 1 1 5C964A23
 P 9450 1300
@@ -836,7 +796,7 @@ L Device:C C4
 U 1 1 5C566DDD
 P 1500 3750
 F 0 "C4" H 1615 3796 50  0000 L CNN
-F 1 "0.1uF" H 1615 3705 50  0000 L CNN
+F 1 "10nF" H 1615 3705 50  0000 L CNN
 F 2 "" H 1538 3600 50  0001 C CNN
 F 3 "" H 1500 3750 50  0001 C CNN
 F 4 "C" H 1500 3750 50  0001 C CNN "Spice_Primitive"
@@ -1305,4 +1265,36 @@ F 3 "" H 7100 3250 50  0001 C CNN
 	1    7100 3250
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:VDD #PWR020
+U 1 1 5C964291
+P 9150 1300
+F 0 "#PWR020" H 9150 1150 50  0001 C CNN
+F 1 "VDD" H 9167 1473 50  0000 C CNN
+F 2 "" H 9150 1300 50  0001 C CNN
+F 3 "" H 9150 1300 50  0001 C CNN
+	1    9150 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5C194501
+P 9150 1800
+AR Path="/5C194501" Ref="#PWR021"  Part="1" 
+AR Path="/5C77D6A4/5C194501" Ref="#PWR?"  Part="1" 
+F 0 "#PWR021" H 9150 1550 50  0001 C CNN
+F 1 "GND" H 9155 1627 50  0000 C CNN
+F 2 "" H 9150 1800 50  0001 C CNN
+F 3 "" H 9150 1800 50  0001 C CNN
+	1    9150 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 7100 1750 7100
+Connection ~ 1600 7100
+Wire Wire Line
+	2050 7100 2500 7100
+Wire Wire Line
+	2500 6500 1600 6500
+Connection ~ 1600 6500
 $EndSCHEMATC
