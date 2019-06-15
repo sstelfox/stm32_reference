@@ -15,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:C C6
+L Device:C C2
 U 1 1 5C54792D
 P 1200 5250
-F 0 "C6" H 1315 5296 50  0000 L CNN
+F 0 "C2" H 1315 5296 50  0000 L CNN
 F 1 "0.1uF" H 1315 5205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1238 5100 50  0001 C CNN
 F 3 "" H 1200 5250 50  0001 C CNN
@@ -29,10 +29,10 @@ F 6 "Y" H 1200 5250 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C8
+L Device:C C6
 U 1 1 5C548A3E
 P 1650 5250
-F 0 "C8" H 1765 5296 50  0000 L CNN
+F 0 "C6" H 1765 5296 50  0000 L CNN
 F 1 "0.1uF" H 1765 5205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1688 5100 50  0001 C CNN
 F 3 "" H 1650 5250 50  0001 C CNN
@@ -43,10 +43,10 @@ F 6 "Y" H 1650 5250 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C13
+L Device:C C7
 U 1 1 5C548CA4
 P 2100 5250
-F 0 "C13" H 2215 5296 50  0000 L CNN
+F 0 "C7" H 2215 5296 50  0000 L CNN
 F 1 "0.1uF" H 2215 5205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 2138 5100 50  0001 C CNN
 F 3 "" H 2100 5250 50  0001 C CNN
@@ -68,10 +68,10 @@ Wire Wire Line
 	1200 4950 1650 4950
 Connection ~ 1650 4950
 $Comp
-L power:GND #PWR010
+L power:GND #PWR06
 U 1 1 5C54ED17
 P 1650 5700
-F 0 "#PWR010" H 1650 5450 50  0001 C CNN
+F 0 "#PWR06" H 1650 5450 50  0001 C CNN
 F 1 "GND" H 1655 5527 50  0000 C CNN
 F 2 "" H 1650 5700 50  0001 C CNN
 F 3 "" H 1650 5700 50  0001 C CNN
@@ -105,10 +105,10 @@ F 5 "0.92" V 1850 950 50  0001 C CNN "DigiKey Price"
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR04
+L power:GND #PWR03
 U 1 1 5A74F566
 P 1100 950
-F 0 "#PWR04" H 1100 700 50  0001 C CNN
+F 0 "#PWR03" H 1100 700 50  0001 C CNN
 F 1 "GND" H 1100 800 50  0000 C CNN
 F 2 "" H 1100 950 50  0001 C CNN
 F 3 "" H 1100 950 50  0001 C CNN
@@ -122,10 +122,10 @@ Wire Wire Line
 Wire Wire Line
 	1450 950  1300 950 
 $Comp
-L stm32_reference_project-rescue:R-relay_system_controller-rescue-relay_system_controller-rescue R4
+L stm32_reference_project-rescue:R-relay_system_controller-rescue-relay_system_controller-rescue R3
 U 1 1 5ADA1249
 P 2150 1900
-F 0 "R4" V 1950 1900 50  0000 C CNN
+F 0 "R3" V 1950 1900 50  0000 C CNN
 F 1 "22" V 2050 1900 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 2080 1900 50  0001 C CNN
 F 3 "" H 2150 1900 50  0001 C CNN
@@ -136,10 +136,10 @@ F 6 "Y" H 2150 1900 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    1    1    0   
 $EndComp
 $Comp
-L stm32_reference_project-rescue:R-relay_system_controller-rescue-relay_system_controller-rescue R5
+L stm32_reference_project-rescue:R-relay_system_controller-rescue-relay_system_controller-rescue R4
 U 1 1 5ADA14FC
 P 2450 1600
-F 0 "R5" H 2550 1650 50  0000 C CNN
+F 0 "R4" H 2550 1650 50  0000 C CNN
 F 1 "1.5k" H 2600 1550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 2380 1600 50  0001 C CNN
 F 3 "" H 2450 1600 50  0001 C CNN
@@ -150,10 +150,10 @@ F 6 "Y" H 2450 1600 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    -1  
 $EndComp
 $Comp
-L stm32_reference_project-rescue:R-relay_system_controller-rescue-relay_system_controller-rescue R2
+L stm32_reference_project-rescue:R-relay_system_controller-rescue-relay_system_controller-rescue R1
 U 1 1 5ADA17B2
 P 1450 1900
-F 0 "R2" V 1650 1900 50  0000 C CNN
+F 0 "R1" V 1650 1900 50  0000 C CNN
 F 1 "22" V 1550 1900 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 1380 1900 50  0001 C CNN
 F 3 "" H 1450 1900 50  0001 C CNN
@@ -178,10 +178,10 @@ F 6 "Y" H 1050 2200 50  0001 C CNN "Spice_Netlist_Enabled"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C C5
+L Device:C C8
 U 1 1 5C0BA9F9
 P 2450 2200
-F 0 "C5" H 2300 2150 50  0000 C CNN
+F 0 "C8" H 2300 2150 50  0000 C CNN
 F 1 "47pF" H 2250 2250 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 2488 2050 50  0001 C CNN
 F 3 "" H 2450 2200 50  0001 C CNN
@@ -192,10 +192,10 @@ F 6 "Y" H 2450 2200 50  0001 C CNN "Spice_Netlist_Enabled"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR03
+L power:GND #PWR02
 U 1 1 5C0BD417
 P 1050 2500
-F 0 "#PWR03" H 1050 2250 50  0001 C CNN
+F 0 "#PWR02" H 1050 2250 50  0001 C CNN
 F 1 "GND" H 1055 2327 50  0000 C CNN
 F 2 "" H 1050 2500 50  0001 C CNN
 F 3 "" H 1050 2500 50  0001 C CNN
@@ -214,10 +214,10 @@ F 3 "" H 1600 6800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR02
+L power:GND #PWR01
 U 1 1 5C112DF0
 P 1000 7250
-F 0 "#PWR02" H 1000 7000 50  0001 C CNN
+F 0 "#PWR01" H 1000 7000 50  0001 C CNN
 F 1 "GND" H 1005 7077 50  0000 C CNN
 F 2 "" H 1000 7250 50  0001 C CNN
 F 3 "" H 1000 7250 50  0001 C CNN
@@ -225,10 +225,10 @@ F 3 "" H 1000 7250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C3
+L Device:C C4
 U 1 1 5C1161FC
 P 1300 7100
-F 0 "C3" V 1048 7100 50  0000 C CNN
+F 0 "C4" V 1048 7100 50  0000 C CNN
 F 1 "20pF" V 1139 7100 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1338 6950 50  0001 C CNN
 F 3 "" H 1300 7100 50  0001 C CNN
@@ -239,10 +239,10 @@ F 6 "Y" H 1300 7100 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C2
+L Device:C C3
 U 1 1 5C1174FD
 P 1300 6500
-F 0 "C2" V 1048 6500 50  0000 C CNN
+F 0 "C3" V 1048 6500 50  0000 C CNN
 F 1 "20pF" V 1139 6500 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1338 6350 50  0001 C CNN
 F 3 "" H 1300 6500 50  0001 C CNN
@@ -280,10 +280,10 @@ F 3 "" H 3650 6800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR08
+L power:GND #PWR09
 U 1 1 5C33BFCF
 P 3050 7250
-F 0 "#PWR08" H 3050 7000 50  0001 C CNN
+F 0 "#PWR09" H 3050 7000 50  0001 C CNN
 F 1 "GND" H 3055 7077 50  0000 C CNN
 F 2 "" H 3050 7250 50  0001 C CNN
 F 3 "" H 3050 7250 50  0001 C CNN
@@ -424,12 +424,12 @@ F 3 "" H 1100 3550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR05
+L power:GND #PWR04
 U 1 1 5C1944A1
 P 1300 4000
-AR Path="/5C1944A1" Ref="#PWR05"  Part="1" 
+AR Path="/5C1944A1" Ref="#PWR04"  Part="1" 
 AR Path="/5C77D6A4/5C1944A1" Ref="#PWR?"  Part="1" 
-F 0 "#PWR05" H 1300 3750 50  0001 C CNN
+F 0 "#PWR04" H 1300 3750 50  0001 C CNN
 F 1 "GND" H 1305 3827 50  0000 C CNN
 F 2 "" H 1300 4000 50  0001 C CNN
 F 3 "" H 1300 4000 50  0001 C CNN
@@ -507,10 +507,10 @@ Wire Wire Line
 Wire Wire Line
 	700  3200 1100 3200
 $Comp
-L Device:R R3
+L Device:R R2
 U 1 1 5C5787B0
 P 1900 7100
-F 0 "R3" H 1970 7146 50  0000 L CNN
+F 0 "R2" H 1970 7146 50  0000 L CNN
 F 1 "390" H 1970 7055 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 1830 7100 50  0001 C CNN
 F 3 "" H 1900 7100 50  0001 C CNN
@@ -528,10 +528,10 @@ Wire Wire Line
 	700  4950 1200 4950
 Connection ~ 1200 4950
 $Comp
-L power:GND #PWR01
+L power:GND #PWR014
 U 1 1 5C7B2CA7
 P 4450 3850
-F 0 "#PWR01" H 4450 3600 50  0001 C CNN
+F 0 "#PWR014" H 4450 3600 50  0001 C CNN
 F 1 "GND" H 4455 3677 50  0000 C CNN
 F 2 "" H 4450 3850 50  0001 C CNN
 F 3 "" H 4450 3850 50  0001 C CNN
@@ -539,10 +539,10 @@ F 3 "" H 4450 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR06
+L power:GNDA #PWR017
 U 1 1 5C7B330D
 P 5050 3850
-F 0 "#PWR06" H 5050 3600 50  0001 C CNN
+F 0 "#PWR017" H 5050 3600 50  0001 C CNN
 F 1 "GNDA" H 5055 3677 50  0000 C CNN
 F 2 "" H 5050 3850 50  0001 C CNN
 F 3 "" H 5050 3850 50  0001 C CNN
@@ -550,10 +550,10 @@ F 3 "" H 5050 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
+L Device:R R5
 U 1 1 5C7B39AF
 P 4750 3700
-F 0 "R1" V 4543 3700 50  0000 C CNN
+F 0 "R5" V 4543 3700 50  0000 C CNN
 F 1 "0" V 4634 3700 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4680 3700 50  0001 C CNN
 F 3 "" H 4750 3700 50  0001 C CNN
@@ -573,10 +573,10 @@ Wire Wire Line
 Wire Wire Line
 	4450 3700 4450 3850
 $Comp
-L power:GND #PWR017
+L power:GND #PWR018
 U 1 1 5C7EE652
 P 5050 7300
-F 0 "#PWR017" H 5050 7050 50  0001 C CNN
+F 0 "#PWR018" H 5050 7050 50  0001 C CNN
 F 1 "GND" H 5055 7127 50  0000 C CNN
 F 2 "" H 5050 7300 50  0001 C CNN
 F 3 "" H 5050 7300 50  0001 C CNN
@@ -652,10 +652,10 @@ Connection ~ 9300 3300
 Wire Wire Line
 	9300 3300 9550 3300
 $Comp
-L power:VDD #PWR09
+L power:VDD #PWR05
 U 1 1 5C89E838
 P 1650 4750
-F 0 "#PWR09" H 1650 4600 50  0001 C CNN
+F 0 "#PWR05" H 1650 4600 50  0001 C CNN
 F 1 "VDD" H 1667 4923 50  0000 C CNN
 F 2 "" H 1650 4750 50  0001 C CNN
 F 3 "" H 1650 4750 50  0001 C CNN
@@ -788,10 +788,10 @@ F 3 "" H 4200 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C4
+L Device:C C5
 U 1 1 5C566DDD
 P 1500 3550
-F 0 "C4" H 1615 3596 50  0000 L CNN
+F 0 "C5" H 1615 3596 50  0000 L CNN
 F 1 "10nF" H 1615 3505 50  0000 L CNN
 F 2 "" H 1538 3400 50  0001 C CNN
 F 3 "" H 1500 3550 50  0001 C CNN
@@ -803,10 +803,10 @@ F 6 "Y" H 1500 3550 50  0001 C CNN "Spice_Netlist_Enabled"
 $EndComp
 Connection ~ 1100 3200
 $Comp
-L power:VDD #PWR014
+L power:VDD #PWR015
 U 1 1 5C91AD3F
 P 4600 6350
-F 0 "#PWR014" H 4600 6200 50  0001 C CNN
+F 0 "#PWR015" H 4600 6200 50  0001 C CNN
 F 1 "VDD" H 4617 6523 50  0000 C CNN
 F 2 "" H 4600 6350 50  0001 C CNN
 F 3 "" H 4600 6350 50  0001 C CNN
@@ -861,17 +861,6 @@ F 1 "1.8V-3.6V" H 5168 7055 50  0000 L CNN
 F 2 "Battery:Battery_CR1225" V 5050 7110 50  0001 C CNN
 F 3 "" V 5050 7110 50  0001 C CNN
 	1    5050 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:MIC5501-3.0YM5 U1
-U 1 1 5C5B51DF
-P 4200 2000
-F 0 "U1" H 4200 2367 50  0000 C CNN
-F 1 "MIC5501-3.0YM5" H 4200 2276 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4200 1600 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MIC550X.pdf" H 3950 2250 50  0001 C CNN
-	1    4200 2000
 	1    0    0    -1  
 $EndComp
 Text Notes 4400 6050 0    50   ~ 0
@@ -988,10 +977,10 @@ F 6 "Y" H 3950 5250 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C7
+L Device:C C9
 U 1 1 5C7AE177
 P 3050 5250
-F 0 "C7" H 3165 5296 50  0000 L CNN
+F 0 "C9" H 3165 5296 50  0000 L CNN
 F 1 "10uF" H 3165 5205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3088 5100 50  0001 C CNN
 F 3 "" H 3050 5250 50  0001 C CNN
@@ -1006,12 +995,12 @@ The ferrite bead is not necessary unless higher\nprecision from the ADC is desir
 Wire Wire Line
 	2500 3050 2500 3200
 $Comp
-L Device:D D2
+L Device:D D1
 U 1 1 5CA5FD4B
 P 2500 3350
-AR Path="/5CA5FD4B" Ref="D2"  Part="1" 
+AR Path="/5CA5FD4B" Ref="D1"  Part="1" 
 AR Path="/5C277487/5CA5FD4B" Ref="D?"  Part="1" 
-F 0 "D2" H 2500 3250 50  0000 C CNN
+F 0 "D1" H 2500 3250 50  0000 C CNN
 F 1 "NEEDS_SPEC" H 2500 3225 50  0001 C CNN
 F 2 "Diode_SMD:D_SOD-123" H 2500 3350 50  0001 C CNN
 F 3 "" H 2500 3350 50  0001 C CNN
@@ -1024,10 +1013,10 @@ Wire Wire Line
 Wire Wire Line
 	3300 4100 3300 3950
 $Comp
-L power:GND #PWR018
+L power:GND #PWR010
 U 1 1 5C901C3E
 P 3300 4100
-F 0 "#PWR018" H 3300 3850 50  0001 C CNN
+F 0 "#PWR010" H 3300 3850 50  0001 C CNN
 F 1 "GND" H 3305 3927 50  0000 C CNN
 F 2 "" H 3300 4100 50  0001 C CNN
 F 3 "" H 3300 4100 50  0001 C CNN
@@ -1039,10 +1028,10 @@ Wire Wire Line
 Wire Wire Line
 	2500 3500 2500 3650
 $Comp
-L power:VDD #PWR015
+L power:VDD #PWR08
 U 1 1 5C8FA548
 P 2500 3050
-F 0 "#PWR015" H 2500 2900 50  0001 C CNN
+F 0 "#PWR08" H 2500 2900 50  0001 C CNN
 F 1 "VDD" H 2517 3223 50  0000 C CNN
 F 2 "" H 2500 3050 50  0001 C CNN
 F 3 "" H 2500 3050 50  0001 C CNN
@@ -1066,12 +1055,12 @@ Wire Wire Line
 Text Label 1950 3750 0    50   ~ 0
 PROG_TRACESWO
 $Comp
-L Device:D D1
+L Device:D D2
 U 1 1 5C0D38F7
 P 2850 1300
-AR Path="/5C0D38F7" Ref="D1"  Part="1" 
+AR Path="/5C0D38F7" Ref="D2"  Part="1" 
 AR Path="/5C277487/5C0D38F7" Ref="D?"  Part="1" 
-F 0 "D1" H 2850 1200 50  0000 C CNN
+F 0 "D2" H 2850 1200 50  0000 C CNN
 F 1 "NEEDS_SPEC" H 2850 1175 50  0001 C CNN
 F 2 "Diode_SMD:D_SOD-123" H 2850 1300 50  0001 C CNN
 F 3 "" H 2850 1300 50  0001 C CNN
@@ -1380,10 +1369,10 @@ F 3 "" H 10050 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C9
+L Device:C C13
 U 1 1 5C7AE180
 P 3500 5250
-F 0 "C9" H 3615 5296 50  0000 L CNN
+F 0 "C13" H 3615 5296 50  0000 L CNN
 F 1 "10uF" H 3615 5205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3538 5100 50  0001 C CNN
 F 3 "" H 3500 5250 50  0001 C CNN
@@ -1397,4 +1386,15 @@ Text Label 700  3200 0    50   ~ 0
 RESET
 Text Notes 4150 3400 0    50   ~ 0
 Analog / digital ground tied only\nat this point to limit noise
+$Comp
+L Regulator_Linear:MIC5504-3.3YM5 U1
+U 1 1 5D05898C
+P 4200 2000
+F 0 "U1" H 4200 2367 50  0000 C CNN
+F 1 "MIC5504-3.3YM5" H 4200 2276 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4200 1600 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MIC550X.pdf" H 3950 2250 50  0001 C CNN
+	1    4200 2000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
