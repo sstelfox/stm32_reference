@@ -349,8 +349,6 @@ Wire Wire Line
 	3650 6500 4200 6500
 Wire Wire Line
 	3650 7100 4200 7100
-Text Label 7700 1550 0    50   ~ 0
-BOOT0
 $Comp
 L power:GND #PWR07
 U 1 1 5C8F8003
@@ -409,24 +407,6 @@ F 3 "" H 1300 3950 50  0001 C CNN
 	1    1300 3950
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R6
-U 1 1 5C194511
-P 8300 1550
-AR Path="/5C194511" Ref="R6"  Part="1" 
-AR Path="/5C77D6A4/5C194511" Ref="R?"  Part="1" 
-F 0 "R6" V 8093 1550 50  0000 C CNN
-F 1 "10k" V 8184 1550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8230 1550 50  0001 C CNN
-F 3 "" H 8300 1550 50  0001 C CNN
-F 4 "R" H 8300 1550 50  0001 C CNN "Spice_Primitive"
-F 5 "10k" H 8300 1550 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 8300 1550 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    8300 1550
-	0    1    1    0   
-$EndComp
-Text Notes 8300 1000 0    50   ~ 0
-BOOT_SELECT:\nUser Flash (Normal): BOOT0-X, BOOT1-Off\nSystem Memory (Prog via USART1): BOOT0-Off, BOOT1-On\nEmbedded SRAM: BOOT0-On, BOOT1-On
 Wire Wire Line
 	2050 1250 2050 1300
 Wire Wire Line
@@ -434,31 +414,6 @@ Wire Wire Line
 Connection ~ 1000 7100
 Wire Wire Line
 	3300 1300 2900 1300
-$Comp
-L Switch:SW_DPDT_x2 SW3
-U 1 1 5C541C87
-P 8800 1550
-F 0 "SW3" H 8800 1200 50  0000 C CNN
-F 1 "BOOT_SELECT" H 8800 1300 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W7.62mm_P2.54mm" H 8800 1550 50  0001 C CNN
-F 3 "" H 8800 1550 50  0001 C CNN
-F 4 "CT2102MS-ND" H 8800 1550 50  0001 C CNN "DigiKey Part"
-F 5 "0.43" H 8800 1550 50  0001 C CNN "DigiKey Price"
-	1    8800 1550
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	9000 1450 9150 1450
-Wire Wire Line
-	9150 1450 9150 1300
-Wire Wire Line
-	9150 1800 9150 1650
-Wire Wire Line
-	9150 1650 9000 1650
-Wire Wire Line
-	8450 1550 8600 1550
-Wire Wire Line
-	7700 1550 8150 1550
 $Comp
 L Device:R R2
 U 1 1 5C5787B0
@@ -533,69 +488,42 @@ Wire Wire Line
 $Comp
 L Device:C C17
 U 1 1 5C83E9AD
-P 9400 3750
-F 0 "C17" H 9515 3796 50  0000 L CNN
-F 1 "0.1uF" H 9515 3705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9438 3600 50  0001 C CNN
-F 3 "" H 9400 3750 50  0001 C CNN
-F 4 "C" H 9400 3750 50  0001 C CNN "Spice_Primitive"
-F 5 "100n" H 9400 3750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 9400 3750 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    9400 3750
+P 9650 4450
+F 0 "C17" H 9765 4496 50  0000 L CNN
+F 1 "0.1uF" H 9765 4405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9688 4300 50  0001 C CNN
+F 3 "" H 9650 4450 50  0001 C CNN
+F 4 "C" H 9650 4450 50  0001 C CNN "Spice_Primitive"
+F 5 "100n" H 9650 4450 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9650 4450 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9650 4450
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR025
 U 1 1 5C8448B4
-P 9650 4200
-F 0 "#PWR025" H 9650 3950 50  0001 C CNN
-F 1 "GND" H 9655 4027 50  0000 C CNN
-F 2 "" H 9650 4200 50  0001 C CNN
-F 3 "" H 9650 4200 50  0001 C CNN
-	1    9650 4200
+P 9900 4800
+F 0 "#PWR025" H 9900 4550 50  0001 C CNN
+F 1 "GND" H 9905 4627 50  0000 C CNN
+F 2 "" H 9900 4800 50  0001 C CNN
+F 3 "" H 9900 4800 50  0001 C CNN
+	1    9900 4800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9400 4050 9400 3900
-Text Label 8850 3450 0    50   ~ 0
-MICRO_VDDA
 $Comp
 L Device:C C18
 U 1 1 5C8605A8
-P 9900 3750
-F 0 "C18" H 10015 3796 50  0000 L CNN
-F 1 "1uF" H 10015 3705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9938 3600 50  0001 C CNN
-F 3 "" H 9900 3750 50  0001 C CNN
-F 4 "C" H 9900 3750 50  0001 C CNN "Spice_Primitive"
-F 5 "1u" H 9900 3750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 9900 3750 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    9900 3750
+P 10150 4450
+F 0 "C18" H 10265 4496 50  0000 L CNN
+F 1 "1uF" H 10265 4405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10188 4300 50  0001 C CNN
+F 3 "" H 10150 4450 50  0001 C CNN
+F 4 "C" H 10150 4450 50  0001 C CNN "Spice_Primitive"
+F 5 "1u" H 10150 4450 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 10150 4450 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    10150 4450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9400 4050 9650 4050
-Wire Wire Line
-	9900 3900 9900 4050
-Wire Wire Line
-	9650 4200 9650 4050
-Connection ~ 9650 4050
-Wire Wire Line
-	9650 4050 9900 4050
-Wire Wire Line
-	9400 3450 9400 3600
-Wire Wire Line
-	8850 3450 9400 3450
-Wire Wire Line
-	9900 3450 9900 3600
-Connection ~ 9400 3450
-Wire Wire Line
-	9400 3450 9650 3450
-Wire Wire Line
-	9650 3300 9650 3450
-Connection ~ 9650 3450
-Wire Wire Line
-	9650 3450 9900 3450
 $Comp
 L power:VDD #PWR05
 U 1 1 5C89E838
@@ -610,94 +538,25 @@ $EndComp
 $Comp
 L Device:Ferrite_Bead_Small FB1
 U 1 1 5C8A0B8D
-P 9650 3200
-F 0 "FB1" H 9500 3200 50  0000 C CNN
-F 1 "NEEDS_SPEC" H 9650 3000 50  0001 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 9580 3200 50  0001 C CNN
-F 3 "" H 9650 3200 50  0001 C CNN
-	1    9650 3200
+P 9900 4000
+F 0 "FB1" H 9750 4000 50  0000 C CNN
+F 1 "NEEDS_SPEC" H 9900 3800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9830 4000 50  0001 C CNN
+F 3 "" H 9900 4000 50  0001 C CNN
+	1    9900 4000
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:VDD #PWR024
 U 1 1 5C8A198A
-P 9650 2950
-F 0 "#PWR024" H 9650 2800 50  0001 C CNN
-F 1 "VDD" H 9667 3123 50  0000 C CNN
-F 2 "" H 9650 2950 50  0001 C CNN
-F 3 "" H 9650 2950 50  0001 C CNN
-	1    9650 2950
+P 9900 3800
+F 0 "#PWR024" H 9900 3650 50  0001 C CNN
+F 1 "VDD" H 9917 3973 50  0000 C CNN
+F 2 "" H 9900 3800 50  0001 C CNN
+F 3 "" H 9900 3800 50  0001 C CNN
+	1    9900 3800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9650 2950 9650 3100
-$Comp
-L power:VDD #PWR026
-U 1 1 5C964A23
-P 9450 1300
-F 0 "#PWR026" H 9450 1150 50  0001 C CNN
-F 1 "VDD" H 9467 1473 50  0000 C CNN
-F 2 "" H 9450 1300 50  0001 C CNN
-F 3 "" H 9450 1300 50  0001 C CNN
-	1    9450 1300
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	10150 1550 10000 1550
-Wire Wire Line
-	10900 1550 10450 1550
-Wire Wire Line
-	9450 1650 9600 1650
-Wire Wire Line
-	9450 1800 9450 1650
-Wire Wire Line
-	9450 1450 9450 1300
-Wire Wire Line
-	9600 1450 9450 1450
-$Comp
-L power:GND #PWR027
-U 1 1 5C9DED09
-P 9450 1800
-AR Path="/5C9DED09" Ref="#PWR027"  Part="1" 
-AR Path="/5C77D6A4/5C9DED09" Ref="#PWR?"  Part="1" 
-F 0 "#PWR027" H 9450 1550 50  0001 C CNN
-F 1 "GND" H 9455 1627 50  0000 C CNN
-F 2 "" H 9450 1800 50  0001 C CNN
-F 3 "" H 9450 1800 50  0001 C CNN
-	1    9450 1800
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_DPDT_x2 SW3
-U 2 1 5C542479
-P 9800 1550
-F 0 "SW3" H 9800 1225 50  0000 C CNN
-F 1 "BOOT_SELECT" H 9800 1316 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W7.62mm_P2.54mm" H 9800 1550 50  0001 C CNN
-F 3 "" H 9800 1550 50  0001 C CNN
-F 4 "CT2102MS-ND" H 9800 1550 50  0001 C CNN "DigiKey Part"
-F 5 "0.43" H 9800 1550 50  0001 C CNN "DigiKey Price"
-	2    9800 1550
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R9
-U 1 1 5C194517
-P 10300 1550
-AR Path="/5C194517" Ref="R9"  Part="1" 
-AR Path="/5C77D6A4/5C194517" Ref="R?"  Part="1" 
-F 0 "R9" V 10093 1550 50  0000 C CNN
-F 1 "10k" V 10184 1550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 10230 1550 50  0001 C CNN
-F 3 "" H 10300 1550 50  0001 C CNN
-F 4 "R" H 10300 1550 50  0001 C CNN "Spice_Primitive"
-F 5 "10k" H 10300 1550 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 10300 1550 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    10300 1550
-	0    -1   1    0   
-$EndComp
-Text Label 10900 1550 2    50   ~ 0
-BOOT1
 $Comp
 L power:VDD #PWR016
 U 1 1 5CA074D3
@@ -810,7 +669,7 @@ F 3 "" V 5100 6760 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 4450 5700 0    50   ~ 0
-Vbat can be powered by a seperate battery to keep the\nRTC and backup registers running when main power is\nremoved, otherwise it should be connected to the main\nsupply with a decoupling cap.\n\nIn real applications one of these two options should be\nselected.
+Vbat can be powered by a seperate battery to keep the\nRTC and backup registers running when main power is\nremoved, otherwise it should be connected to the main\nsupply with this decoupling cap.
 Text Label 3300 1900 0    50   ~ 0
 USB_VCC
 $Comp
@@ -915,7 +774,7 @@ F 6 "Y" H 3050 5250 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3050 5250
 	1    0    0    -1  
 $EndComp
-Text Notes 8700 2650 0    50   ~ 0
+Text Notes 8950 3600 0    50   ~ 0
 The ferrite bead is not necessary unless higher\nprecision from the ADC is desired. This connection\nshould be made relatively close to the analog /\ndigital ground tie.
 $Comp
 L Device:D D1
@@ -1132,7 +991,7 @@ PROG_SWDIO
 Text Label 5700 1950 0    50   ~ 0
 RESET
 Text Notes 6200 1000 0    50   ~ 0
-Vdd, and Vdda require a voltage of\n2.0V - 3.6V (2.4V - 3.6V when the ADC is used)\n\nVbat requires a voltage of 1.8V - 3.6V
+Vdd / Vdda require a voltage of\n2.0V - 3.6V (2.4V - 3.6V when the ADC is used)\nVbat requires a voltage of 1.8V - 3.6V
 $Comp
 L MCU_ST_STM32F1:STM32F103C8Tx U2
 U 1 1 5C50E79D
@@ -1142,30 +1001,6 @@ F 1 "STM32F103C8Tx" H 7050 3200 50  0000 C CNN
 F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 6500 1850 50  0001 R CNN
 F 3 "" H 7100 3250 50  0001 C CNN
 	1    7100 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VDD #PWR022
-U 1 1 5C964291
-P 9150 1300
-F 0 "#PWR022" H 9150 1150 50  0001 C CNN
-F 1 "VDD" H 9167 1473 50  0000 C CNN
-F 2 "" H 9150 1300 50  0001 C CNN
-F 3 "" H 9150 1300 50  0001 C CNN
-	1    9150 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR023
-U 1 1 5C194501
-P 9150 1800
-AR Path="/5C194501" Ref="#PWR023"  Part="1" 
-AR Path="/5C77D6A4/5C194501" Ref="#PWR?"  Part="1" 
-F 0 "#PWR023" H 9150 1550 50  0001 C CNN
-F 1 "GND" H 9155 1627 50  0000 C CNN
-F 2 "" H 9150 1800 50  0001 C CNN
-F 3 "" H 9150 1800 50  0001 C CNN
-	1    9150 1800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1179,47 +1014,47 @@ Connection ~ 1600 6500
 $Comp
 L Device:R R7
 U 1 1 5D04195A
-P 8150 5650
-F 0 "R7" V 7943 5650 50  0000 C CNN
-F 1 "390" V 8034 5650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8080 5650 50  0001 C CNN
-F 3 "~" H 8150 5650 50  0001 C CNN
-F 4 "390" H 8150 5650 50  0001 C CNN "Spice_Model"
-F 5 "Y" H 8150 5650 50  0001 C CNN "Spice_Netlist_Enabled"
-F 6 "R" H 8150 5650 50  0001 C CNN "Spice_Primitive"
-	1    8150 5650
+P 7900 5950
+F 0 "R7" V 7693 5950 50  0000 C CNN
+F 1 "390" V 7784 5950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7830 5950 50  0001 C CNN
+F 3 "~" H 7900 5950 50  0001 C CNN
+F 4 "390" H 7900 5950 50  0001 C CNN "Spice_Model"
+F 5 "Y" H 7900 5950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 6 "R" H 7900 5950 50  0001 C CNN "Spice_Primitive"
+	1    7900 5950
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR028
 U 1 1 5D042D15
-P 8900 5800
-F 0 "#PWR028" H 8900 5550 50  0001 C CNN
-F 1 "GND" H 8905 5627 50  0000 C CNN
-F 2 "" H 8900 5800 50  0001 C CNN
-F 3 "" H 8900 5800 50  0001 C CNN
-	1    8900 5800
+P 8650 6100
+F 0 "#PWR028" H 8650 5850 50  0001 C CNN
+F 1 "GND" H 8655 5927 50  0000 C CNN
+F 2 "" H 8650 6100 50  0001 C CNN
+F 3 "" H 8650 6100 50  0001 C CNN
+	1    8650 6100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8900 5800 8900 5650
+	8650 6100 8650 5950
 Wire Wire Line
-	8900 5650 8750 5650
+	8650 5950 8500 5950
 Wire Wire Line
-	8450 5650 8300 5650
+	8200 5950 8050 5950
 Wire Wire Line
-	7850 5500 7850 5650
+	7600 5800 7600 5950
 Wire Wire Line
-	7850 5650 8000 5650
+	7600 5950 7750 5950
 $Comp
 L power:VDD #PWR021
 U 1 1 5D04B1D1
-P 7850 5500
-F 0 "#PWR021" H 7850 5350 50  0001 C CNN
-F 1 "VDD" H 7867 5673 50  0000 C CNN
-F 2 "" H 7850 5500 50  0001 C CNN
-F 3 "" H 7850 5500 50  0001 C CNN
-	1    7850 5500
+P 7600 5800
+F 0 "#PWR021" H 7600 5650 50  0001 C CNN
+F 1 "VDD" H 7617 5973 50  0000 C CNN
+F 2 "" H 7600 5800 50  0001 C CNN
+F 3 "" H 7600 5800 50  0001 C CNN
+	1    7600 5800
 	1    0    0    -1  
 $EndComp
 Text Label 5700 4350 0    50   ~ 0
@@ -1227,49 +1062,49 @@ PROG_LED
 Wire Wire Line
 	6400 4350 5700 4350
 Wire Wire Line
-	9850 5650 9350 5650
-Text Label 9350 5650 0    50   ~ 0
+	9600 5950 9100 5950
+Text Label 9100 5950 0    50   ~ 0
 PROG_LED
 Wire Wire Line
-	10750 5650 10750 5800
+	10500 5950 10500 6100
 Wire Wire Line
-	10600 5650 10750 5650
+	10350 5950 10500 5950
 Wire Wire Line
-	10150 5650 10300 5650
+	9900 5950 10050 5950
 $Comp
 L Device:R R8
 U 1 1 5D0447C1
-P 10000 5650
-F 0 "R8" V 9793 5650 50  0000 C CNN
-F 1 "390" V 9884 5650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 9930 5650 50  0001 C CNN
-F 3 "~" H 10000 5650 50  0001 C CNN
-F 4 "390" H 10000 5650 50  0001 C CNN "Spice_Model"
-F 5 "Y" H 10000 5650 50  0001 C CNN "Spice_Netlist_Enabled"
-F 6 "R" H 10000 5650 50  0001 C CNN "Spice_Primitive"
-	1    10000 5650
+P 9750 5950
+F 0 "R8" V 9543 5950 50  0000 C CNN
+F 1 "390" V 9634 5950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9680 5950 50  0001 C CNN
+F 3 "~" H 9750 5950 50  0001 C CNN
+F 4 "390" H 9750 5950 50  0001 C CNN "Spice_Model"
+F 5 "Y" H 9750 5950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 6 "R" H 9750 5950 50  0001 C CNN "Spice_Primitive"
+	1    9750 5950
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:LED D4
 U 1 1 5D0447C0
-P 10450 5650
-F 0 "D4" H 10443 5395 50  0000 C CNN
-F 1 "LED" H 10443 5486 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 10450 5650 50  0001 C CNN
-F 3 "~" H 10450 5650 50  0001 C CNN
-	1    10450 5650
+P 10200 5950
+F 0 "D4" H 10193 5695 50  0000 C CNN
+F 1 "LED" H 10193 5786 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 10200 5950 50  0001 C CNN
+F 3 "~" H 10200 5950 50  0001 C CNN
+	1    10200 5950
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR029
 U 1 1 5D0447BF
-P 10750 5800
-F 0 "#PWR029" H 10750 5550 50  0001 C CNN
-F 1 "GND" H 10755 5627 50  0000 C CNN
-F 2 "" H 10750 5800 50  0001 C CNN
-F 3 "" H 10750 5800 50  0001 C CNN
-	1    10750 5800
+P 10500 6100
+F 0 "#PWR029" H 10500 5850 50  0001 C CNN
+F 1 "GND" H 10505 5927 50  0000 C CNN
+F 2 "" H 10500 6100 50  0001 C CNN
+F 3 "" H 10500 6100 50  0001 C CNN
+	1    10500 6100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1308,17 +1143,17 @@ Wire Wire Line
 Connection ~ 4000 1900
 Wire Wire Line
 	4000 1900 4050 1900
-Text Notes 9250 5250 0    50   ~ 0
-This matches the expectation of the normal\narduino stm32 bootloader
+Text Notes 8950 5650 0    50   ~ 0
+This LED matches the expectation of the\nstm32duino bootloader "generic_boot20_pc13.bin"\nin the event I want to use that for firmware\ndevelopment
 $Comp
 L Device:LED D3
 U 1 1 5D0420AC
-P 8600 5650
-F 0 "D3" H 8593 5395 50  0000 C CNN
-F 1 "LED" H 8593 5486 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 8600 5650 50  0001 C CNN
-F 3 "~" H 8600 5650 50  0001 C CNN
-	1    8600 5650
+P 8350 5950
+F 0 "D3" H 8343 5695 50  0000 C CNN
+F 1 "LED" H 8343 5786 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 8350 5950 50  0001 C CNN
+F 3 "~" H 8350 5950 50  0001 C CNN
+	1    8350 5950
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -1417,4 +1252,147 @@ Wire Wire Line
 	5000 3800 5000 3700
 Wire Wire Line
 	5000 3700 4900 3700
+Wire Wire Line
+	9900 2300 9800 2300
+Wire Wire Line
+	9900 2400 9800 2400
+Wire Wire Line
+	9900 2500 9900 2700
+Text Label 10500 2400 2    50   ~ 0
+BOOT1
+Wire Wire Line
+	9200 2700 9550 2700
+Text Label 8600 2400 0    50   ~ 0
+BOOT0
+$Comp
+L Device:R R?
+U 1 1 5D0701C5
+P 10050 2400
+AR Path="/5D0701C5" Ref="R?"  Part="1" 
+AR Path="/5C77D6A4/5D0701C5" Ref="R?"  Part="1" 
+F 0 "R?" V 9843 2400 50  0000 C CNN
+F 1 "10k" V 9934 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9980 2400 50  0001 C CNN
+F 3 "" H 10050 2400 50  0001 C CNN
+F 4 "R" H 10050 2400 50  0001 C CNN "Spice_Primitive"
+F 5 "10k" H 10050 2400 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 10050 2400 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    10050 2400
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	9300 2300 9200 2300
+Connection ~ 9550 2700
+Wire Wire Line
+	9550 2000 9550 2100
+Wire Wire Line
+	9900 2100 9900 2300
+$Comp
+L Device:R R?
+U 1 1 5D0701C6
+P 9050 2400
+AR Path="/5D0701C6" Ref="R?"  Part="1" 
+AR Path="/5C77D6A4/5D0701C6" Ref="R?"  Part="1" 
+F 0 "R?" V 8843 2400 50  0000 C CNN
+F 1 "10k" V 8934 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8980 2400 50  0001 C CNN
+F 3 "" H 9050 2400 50  0001 C CNN
+F 4 "R" H 9050 2400 50  0001 C CNN "Spice_Primitive"
+F 5 "10k" H 9050 2400 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9050 2400 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9050 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9200 2400 9300 2400
+Wire Wire Line
+	9200 2100 9550 2100
+Wire Wire Line
+	8600 2400 8900 2400
+Wire Wire Line
+	10200 2400 10500 2400
+$Comp
+L power:GND #PWR?
+U 1 1 5D0701C7
+P 9550 2800
+AR Path="/5D0701C7" Ref="#PWR?"  Part="1" 
+AR Path="/5C77D6A4/5D0701C7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9550 2550 50  0001 C CNN
+F 1 "GND" H 9555 2627 50  0000 C CNN
+F 2 "" H 9550 2800 50  0001 C CNN
+F 3 "" H 9550 2800 50  0001 C CNN
+	1    9550 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 2700 9550 2700
+Connection ~ 9550 2100
+Wire Wire Line
+	9200 2300 9200 2100
+Wire Wire Line
+	9550 2800 9550 2700
+$Comp
+L power:VDD #PWR?
+U 1 1 5D0701C8
+P 9550 2000
+F 0 "#PWR?" H 9550 1850 50  0001 C CNN
+F 1 "VDD" H 9567 2173 50  0000 C CNN
+F 2 "" H 9550 2000 50  0001 C CNN
+F 3 "" H 9550 2000 50  0001 C CNN
+	1    9550 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 2500 9900 2500
+Wire Wire Line
+	9300 2500 9200 2500
+Wire Wire Line
+	9550 2100 9900 2100
+Wire Wire Line
+	9200 2500 9200 2700
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J?
+U 1 1 5D0701C9
+P 9500 2400
+AR Path="/5C77D6A4/5D0701C9" Ref="J?"  Part="1" 
+AR Path="/5D0701C9" Ref="J?"  Part="1" 
+F 0 "J?" H 9500 2600 50  0000 L CNN
+F 1 "BOOT_SELECT" H 9300 2200 50  0000 L CNN
+F 2 "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical" H 9500 2400 50  0001 C CNN
+F 3 "" H 9500 2400 50  0001 C CNN
+F 4 "DNP / Do Not Populate" V 9500 2400 50  0001 C CNN "Comment"
+	1    9500 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 4600 9650 4700
+Wire Wire Line
+	9650 4700 9900 4700
+Wire Wire Line
+	10150 4700 10150 4600
+Wire Wire Line
+	9900 4800 9900 4700
+Connection ~ 9900 4700
+Wire Wire Line
+	9900 4700 10150 4700
+Wire Wire Line
+	9650 4300 9650 4200
+Wire Wire Line
+	9650 4200 9900 4200
+Wire Wire Line
+	10150 4200 10150 4300
+Text Label 9150 4200 0    50   ~ 0
+MICRO_VDDA
+Wire Wire Line
+	9150 4200 9650 4200
+Connection ~ 9650 4200
+Wire Wire Line
+	9900 4100 9900 4200
+Connection ~ 9900 4200
+Wire Wire Line
+	9900 4200 10150 4200
+Wire Wire Line
+	9900 3800 9900 3900
+Text Notes 8650 1700 0    50   ~ 0
+The boot header is present for development when\ncomplete the off positions can be soldered\ntogether to save the cost of the header\n\nBOOT_SELECT:\nUser Flash (Normal): BOOT0-X,  BOOT1-Off\nSystem Memory:      BOOT0-Off, BOOT1-On\nEmbedded SRAM:     BOOT0-On, BOOT1-On
 $EndSCHEMATC
